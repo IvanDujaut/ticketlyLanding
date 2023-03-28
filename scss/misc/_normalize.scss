@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: $primary-color;
+  background-color: $tercery-color;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: $text-secondary;
+  text-decoration: none;
+  color: $primary-color;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;   
+}

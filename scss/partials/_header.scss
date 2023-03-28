@@ -1,0 +1,41 @@
+header {
+  padding: 2.5rem;
+  background-color: $tercery-color;
+  width: 100%;
+  box-shadow: 0 0 7px #7b7b7b;
+  position: fixed;
+  z-index: 999;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    .menu {
+        // display: flex;
+        // gap: 5rem;
+
+        // &__items:hover {
+        //   animation: scale-up 0.5s linear both;
+        //   @include fillStyles;
+        // }
+      display: none;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 9rem;
+        .icons-header {
+            width: 2.8rem;
+            height: auto;
+        }
+    }
+
+    &-toggle {
+      //padding: 0 20px;
+    }
+  }
+}
