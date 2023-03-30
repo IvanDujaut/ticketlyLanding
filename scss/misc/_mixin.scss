@@ -1,3 +1,32 @@
+@mixin h1Styles {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  letter-spacing: -0.02em;
+  color: $primary-color;
+}
+
+@mixin h2Styles($color) {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+  color: $color;
+}
+
+@mixin h3Styles {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  //line-height: 38px;
+  //text-align: center;
+  letter-spacing: -0.015em;
+  color: $primary-color;
+}
+
 @mixin fillStyles {
   font-weight: 500;
   background: #f5e356;
@@ -5,4 +34,37 @@
   border-radius: (1.2em * 2 + 1.6em)/2;
   padding: 1px $text-terciary;
   text-align: center;
+}
+
+@mixin paragraph($color) {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: $color;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bobble {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
