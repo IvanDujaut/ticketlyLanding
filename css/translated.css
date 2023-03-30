@@ -32,7 +32,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   color: #111111;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   overflow-x: hidden; }
 
 h1 {
@@ -87,9 +87,10 @@ button {
 /* PARTIALS */
 header {
   padding: 0.8rem 2.5rem;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 100%;
   box-shadow: 0 0 7px #7b7b7b;
+  position: fixed;
   z-index: 999; }
   header .navbar {
     display: flex;
@@ -98,7 +99,33 @@ header {
     max-width: 1200px;
     margin: 0 auto; }
     header .navbar .menu {
-      display: none; }
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: #FFFFFF;
+      position: fixed;
+      top: 76px;
+      width: 100%;
+      box-shadow: 0 4px 7px -5px #7b7b7b;
+      padding: 2rem;
+      margin: 0 auto;
+      gap: 1rem;
+      height: auto;
+      overflow-y: auto;
+      right: 0;
+      transition: right 0.3s;
+      z-index: 10; }
+      header .navbar .menu__items:hover {
+        animation: scale-up 0.5s linear both;
+        font-weight: 500;
+        background: #010101;
+        border-radius: 2em;
+        padding: 1px 1.2em;
+        text-align: center; }
+      header .navbar .menu__link:hover {
+        color: #FFFFFF; }
+      header .navbar .menu_visible {
+        right: 100%; }
     header .navbar .logo-container {
       display: flex;
       align-items: center;
@@ -172,6 +199,8 @@ header {
           .footer-information .social-networks-logos__links img {
             width: 100%;
             height: auto; }
+            .footer-information .social-networks-logos__links img:hover {
+              animation: scale-up 0.8s linear both; }
   .footer .copy-right p {
     font-family: "Poppins";
     font-style: normal;
@@ -184,7 +213,7 @@ header {
 
 /* PAGES */
 .banner {
-  padding: 8rem 0 3.2rem;
+  padding: 16rem 0 3.2rem;
   width: 100%;
   min-height: 100vh;
   max-width: 1200px;
@@ -208,6 +237,8 @@ header {
     flex-direction: column;
     row-gap: 2rem; }
     .banner-description h1 {
+      max-width: 300px;
+      margin: 0 auto;
       text-align: center; }
     .banner-description p {
       font-family: "Poppins";
@@ -239,12 +270,14 @@ header {
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   gap: 3rem; }
   .categories-specific {
     padding: 3rem;
     width: 32.5rem;
     height: 32.5rem;
     background: #111111;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
@@ -269,6 +302,8 @@ header {
         margin: 0; }
       .categories-specific .description :hover {
         animation: scale-up 0.75s linear both; }
+    .categories-specific:hover {
+      animation: scale-up 0.8s linear both; }
 
 .carousel-products {
   padding: 3.2rem;
@@ -288,7 +323,11 @@ header {
       max-width: 30rem; }
       .carousel-products .product-list .product-container .imgShoes {
         width: 100%;
-        height: auto; }
+        height: auto;
+        background: #FFFFFF;
+        border-radius: 10px; }
+      .carousel-products .product-list .product-container:hover {
+        animation: scale-up 0.8s linear both; }
       .carousel-products .product-list .product-container .product-info {
         text-align: center; }
       .carousel-products .product-list .product-container h3 {
