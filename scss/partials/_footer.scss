@@ -72,6 +72,9 @@
           img {
             width: 100%;
             height: auto;
+            &:hover {
+              animation: scale-up 0.8s linear both;
+            }
           }
         }
       }

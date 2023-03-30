@@ -1,9 +1,9 @@
 header {
   padding: 0.8rem 2.5rem;
-  background-color: $tercery-color;
+  background-color:#ffffff;
   width: 100%;
   box-shadow: 0 0 7px #7b7b7b;
-  //position: fixed;
+  position: fixed;
   z-index: 999;
 
   .navbar {
@@ -13,29 +13,48 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     .menu {
-        // display: flex;
-        // gap: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: $tercery-color;
+      position: fixed;
+      top: 76px;
+      width: 100%;
+      box-shadow: 0 4px 7px -5px #7b7b7b;
+      padding: 2rem;
+      margin: 0 auto;
+      gap: 1rem;
+      height: auto;
+      overflow-y: auto;
+      right: 0;
+      // @media screen and (max-width: 550px) {
+      //   right: -50%; //arreglar esto
+      // }
+      transition: right 0.3s;
+      z-index: 10;
+      &__items:hover {
+        animation: scale-up 0.5s linear both;
+        @include fillStyles;
+      }
 
-        // &__items:hover {
-        //   animation: scale-up 0.5s linear both;
-        //   @include fillStyles;
-        // }
-      display: none;
+      &__link:hover {
+        color: $tercery-color;
+      }
+
+      &_visible {
+        right: 100%;
+      }
     }
 
     .logo-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 9rem;
-        .icons-header {
-            width: 2.8rem;
-            height: auto;
-        }
-    }
-
-    &-toggle {
-      //padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 9rem;
+      .icons-header {
+        width: 2.8rem;
+        height: auto;
+      }
     }
   }
 }

@@ -29,8 +29,8 @@
 
 @mixin fillStyles {
   font-weight: 500;
-  background: #f5e356;
-  border: 2px solid #010101;
+  background: #010101;
+  // border: 2px solid #010101;
   border-radius: (1.2em * 2 + 1.6em)/2;
   padding: 1px $text-terciary;
   text-align: center;
