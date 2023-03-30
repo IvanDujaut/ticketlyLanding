@@ -46,6 +46,9 @@ a {
   font-size: $text-secondary;
   text-decoration: none;
   color: $primary-color;
+  :hover {
+    color: $primary-color;
+  }
 }
 
 button {

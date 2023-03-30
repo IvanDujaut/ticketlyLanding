@@ -1,0 +1,92 @@
+.footer {
+  margin-top: $sp-xxl;
+  background: $primary-color;
+  padding: $sp-xxl 2.4rem $sp-md;
+  display: flex;
+  flex-direction: column;
+  row-gap: $sp-xl;
+  &-information {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1200px;
+    column-gap: $sp-xxxl;
+    row-gap: $sp-xl;
+    margin: 0 auto;
+    justify-content: space-between;
+    .footer-menu {
+      display: flex;
+      flex-flow: row wrap;
+      row-gap: $sp-xl;
+      column-gap: $sp-xxxl;
+      .first-block {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10rem;
+        .options {
+          &-menu {
+            display: flex;
+            flex-direction: column;
+            row-gap: $sp-md;
+            h4 {
+              font-family: "Poppins";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 28px;
+              color: #c4c4c4;
+              opacity: 0.5;
+            }
+            &__items {
+              a {
+                font-family: "Poppins";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 28px;
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .social-networks {
+      display: flex;
+      flex-direction: column;
+      row-gap: $sp-md;
+      h4 {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 28px;
+        color: #c4c4c4;
+        opacity: 0.5;
+      }
+      &-logos {
+        display: flex;
+        column-gap: $sp-md;
+        &__links {
+          width: 4.5rem;
+          height: auto;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .copy-right {
+    p {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 28px;
+      color: #ffffff;
+      opacity: 0.4;
+      text-align: center;
+    }
+  }
+}
