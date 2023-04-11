@@ -1,84 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sam's Shoes</title>
-    <!-- <link rel="stylesheet" href="./css/bootstrap.css" /> -->
-    <link rel="stylesheet" href="./css/translated.css" />
-    <!-- <script defer src="./js/bootstrap.bundle.js"></script> -->
-    <script
-      src="https://kit.fontawesome.com/479550147b.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script defer src="./js/index.js"></script> -->
-    <!-- <script defer src="./js/main.js"></script> -->
-    <script defer src="./js/prueba.js"></script>
-    <!-- <script defer src="./js/bucles-iteraciones-3.js"></script> -->
-    <!-- <script defer src="./js/after-class.js"></script> -->
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <button class="navbar-toggle">
-          <img src="./images/hamburguerMenu.svg" alt="" />
-        </button>
-        <ul class="menu menu_visible">
-          <li class="menu__items">
-            <a class="menu__link" href="#">Women</a>
-          </li>
-          <li class="menu__items">
-            <a class="menu__link" href="#">Men</a>
-          </li>
-          <li class="menu__items">
-            <a class="menu__link" href="#">Kids</a>
-          </li>
-          <li class="menu__items">
-            <a class="menu__link" href="#">Accessories</a>
-          </li>
-          <li class="menu__items">
-            <a class="menu__link" href="#">Sale</a>
-          </li>
-        </ul>
-        <figure class="container-logo">
-          <img class="logo" src="./images/logoM.svg" alt="" />
-        </figure>
-        <!-- <a href="./images/logoM.svg"></a> -->
-        <div class="logo-container">
-          <button class="icons-header">
-            <img
-              class="icons-header__search"
-              src="./images/searchIconM.svg"
-              alt=""
-            />
-          </button>
-          <button class="icons-header">
-            <img class="icons-header__cart" src="./images/cartM.svg" alt="" />
-          </button>
-        </div>
-      </nav>
-    </header>
 
-    <section class="banner">
-      <div class="content">
-        <figure class="shoes-container">
-          <img class="shoes-container__left" src="./images/shoes.svg" alt="" />
-        </figure>
-        <figure class="shoes-container">
-          <img class="shoes-container__right" src="./images/shoes.svg" alt="" />
-        </figure>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam's Shoes</title>
+  <link rel="stylesheet" href="./css/bootstrap.css" />
+  <link rel="stylesheet" href="./css/translated.css" />
+  <!-- <script defer src="./js/bootstrap.bundle.js"></script> -->
+  <script src="https://kit.fontawesome.com/479550147b.js" crossorigin="anonymous"></script>
+  <!-- <script defer src="./js/index.js"></script> -->
+  <!-- <script defer src="./js/main.js"></script> -->
+  <script defer src="./js/prueba.js"></script>
+  <!-- <script defer src="./js/bucles-iteraciones-3.js"></script> -->
+  <!-- <script defer src="./js/after-class.js"></script> -->
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <button class="navbar-toggle">
+        <img src="./images/hamburguerMenu.svg" alt="" />
+      </button>
+      <ul class="menu menu_visible">
+        <li class="menu__items">
+          <a class="menu__link" href="#">Women</a>
+        </li>
+        <li class="menu__items">
+          <a class="menu__link" href="#">Men</a>
+        </li>
+        <li class="menu__items">
+          <a class="menu__link" href="#">Kids</a>
+        </li>
+        <li class="menu__items">
+          <a class="menu__link" href="#">Accessories</a>
+        </li>
+        <li class="menu__items">
+          <a class="menu__link" href="#">Sale</a>
+        </li>
+      </ul>
+      <figure class="container-logo">
+        <img class="logo" src="./images/logoM.svg" alt="" />
+      </figure>
+      <!-- <a href="./images/logoM.svg"></a> -->
+      <div class="logo-container">
+        <button class="icons-header icons-header-perfil">
+          <a class="user-btn" href="#">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <p class="login-text">Iniciar Sesion</p>
+        </button>
+        <button class="icons-header icons-header-cart">
+          <img class="icons-header__cart" src="./images/cartM.svg" alt="" />
+        </button>
       </div>
-      <article class="banner-description">
-        <h1>Built for flight</h1>
-        <p>Introducing product name. Our lightest shoe, ever.</p>
-        <button>
-          <p>SHOP</p>
-        </button>
-      </article>
-    </section>
+    </nav>
+  </header>
 
-    <section class="categories">
+  <section class="banner">
+    <div class="content">
+      <figure class="shoes-container">
+        <img class="shoes-container__left" src="./images/shoes.svg" alt="" />
+      </figure>
+      <figure class="shoes-container">
+        <img class="shoes-container__right" src="./images/shoes.svg" alt="" />
+      </figure>
+    </div>
+    <article class="banner-description">
+      <h1>Built for flight</h1>
+      <p>Introducing product name. Our lightest shoe, ever.</p>
+      <button>
+        <p>SHOP</p>
+      </button>
+    </article>
+  </section>
+
+  <section class="categories">
+    <article>
+      <h3>Search shoes</h3>
+      <div class="d-flex justify-content-center">
+        <div class="search-box">
+          <input type="text" class="search-input" placeholder="Start Looking For Something!" />
+          <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+    </article>
+    </div>
+
+    <div class="categories-specific__container">
       <div class="categories-specific">
         <h2>Women</h2>
         <button class="description">
@@ -93,258 +104,212 @@
           <img src="./images/rightArrowM.svg" alt="" />
         </button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="carousel-products" id="new-releases">
-      <h2>New releases</h2>
-      <ul class="product-list">
-        <li class="product-container">
-          <article>
-            <img
-              class="imgShoes"
-              src="./images/product1.avif"
-              alt="Zapatos 1: Descripción del producto 1"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </article>
-        </li>
-        <li class="product-container">
-          <article>
-            <img
-              class="imgShoes"
-              src="./images/product2.avif"
-              alt="Zapatos 2: Descripción del producto 2"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </article>
-        </li>
-
-        <li class="product-container">
-          <article>
-            <img
-              class="imgShoes"
-              src="./images/product3.avif"
-              alt="Producto 3"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </article>
-        </li>
-        <li class="product-container">
-          <article>
-            <img
-              class="imgShoes"
-              src="./images/product4.avif"
-              alt="Producto 4"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </article>
-        </li>
-        <li class="product-container">
-          <article>
-            <img
-              class="imgShoes"
-              src="./images/product5.avif"
-              alt="Producto 5"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </article>
-        </li>
-        <li class="product-container">
-          <section>
-            <img
-              class="imgShoes"
-              src="./images/product6.avif"
-              alt="Producto 6"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </section>
-        </li>
-        <li class="product-container">
-          <section>
-            <img
-              class="imgShoes"
-              src="./images/product7.avif"
-              alt="Producto 7"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </section>
-        </li>
-        <li class="product-container">
-          <section>
-            <img
-              class="imgShoes"
-              src="./images/product8.avif"
-              alt="Producto 8"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </section>
-        </li>
-      </ul>
-      <!-- <div class="controls">
-        <button class="prev-button">&lt;</button>
-        <button class="next-button">&gt;</button>
-      </div> -->
-    </section>
-
-    <section class="carousel-products" id="top-kicks">
-      <h2>Top kicks</h2>
-      <ul class="product-list">
-        <li class="product-container">
-          <article>
-            <img
-              class="imgShoes"
-              src="./images/product1.avif"
-              alt="Zapatos 1: Descripción del producto 1"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </article>
-        </li>
-        <li class="product-container">
-          <article>
-            <img
-              class="imgShoes"
-              src="./images/product2.avif"
-              alt="Zapatos 2: Descripción del producto 2"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </article>
-        </li>
-        <!-- Repetir para productos 3 a 8 -->
-
-        <li class="product-container">
-          <!-- Product 3 -->
-          <article>
-            <img
-              class="imgShoes"
-              src="./images/product3.avif"
-              alt="Producto 3"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </article>
-        </li>
-        <li class="product-container">
-          <!-- Product 4 -->
-          <article>
-            <img
-              class="imgShoes"
-              src="./images/product4.avif"
-              alt="Producto 4"
-            />
-            <h3>Product name</h3>
-            <p>Price</p>
-          </article>
-        </li>
-      </ul>
-      <!-- <div class="controls">
-        <button class="prev-button">&lt;</button>
-        <button class="next-button">&gt;</button>
-      </div> -->
-    </section>
-
-    <section class="information">
-      <h2>Never miss a drop.</h2>
-      <p>Receive updates about new products and promotions.</p>
-      <button>
-        <p>JOIN MAILING LIST</p>
-      </button>
-    </section>
-
-    <footer class="footer" id="footer">
-      <section class="footer-information">
-        <div class="footer-menu">
-          <div class="first-block">
-            <article class="options">
-              <ul class="options-menu">
-                <h4>MY ACCOUNT</h4>
-                <li class="options-menu__items">
-                  <a href=""> Sign in </a>
-                </li>
-                <li class="options-menu__items">
-                  <a href=""> Register </a>
-                </li>
-                <li class="options-menu__items">
-                  <a href=""> Order status </a>
-                </li>
-              </ul>
-            </article>
-            <article class="options">
-              <ul class="options-menu">
-                <h4>HELP</h4>
-                <li class="options-menu__items">
-                  <a href=""> Shipping </a>
-                </li>
-                <li class="options-menu__items">
-                  <a href=""> Returns </a>
-                </li>
-                <li class="options-menu__items">
-                  <a href=""> Sizing </a>
-                </li>
-              </ul>
-            </article>
-          </div>
-          <div class="first-block">
-            <article class="options">
-              <ul class="options-menu">
-                <h4>ABOUT</h4>
-                <li class="options-menu__items">
-                  <a href=""> Our story </a>
-                </li>
-                <li class="options-menu__items">
-                  <a href=""> Media </a>
-                </li>
-                <li class="options-menu__items">
-                  <a href=""> Sustainability </a>
-                </li>
-              </ul>
-            </article>
-            <article class="options">
-              <ul class="options-menu">
-                <h4>LEGAL STUFF</h4>
-                <li class="options-menu__items">
-                  <a href=""> Terms of use </a>
-                </li>
-                <li class="options-menu__items">
-                  <a href=""> Terms of sale </a>
-                </li>
-                <li class="options-menu__items">
-                  <a href=""> Privacy policy </a>
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
-        <article class="social-networks">
-          <h4>FOLLOW US</h4>
-          <div class="social-networks-logos">
-            <a class="social-networks-logos__links" href="#">
-              <img src="./images/Facebook.svg" alt="" />
-            </a>
-            <a class="social-networks-logos__links" href="#">
-              <img src="./images/Instagram.svg" alt="" />
-            </a>
-            <a class="social-networks-logos__links" href="#">
-              <img src="./images/Twitter.svg" alt="" />
-            </a>
-            <a class="social-networks-logos__links" href="#">
-              <img src="./images/LinkedIN.svg" alt="" />
-            </a>
-          </div>
+  <section class="carousel-products" id="new-releases">
+    <h2>New releases</h2>
+    <ul class="product-list">
+      <li class="product-container">
+        <article>
+          <img class="imgShoes" src="./images/product1.avif" alt="Zapatos 1: Descripción del producto 1" />
+          <h3>Product name</h3>
+          <p>Price</p>
         </article>
-      </section>
-      <div class="copy-right">
-        <p>© 123 Fake Wireframes Inc. All Rights Reserved</p>
+      </li>
+      <li class="product-container">
+        <article>
+          <img class="imgShoes" src="./images/product2.avif" alt="Zapatos 2: Descripción del producto 2" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </article>
+      </li>
+
+      <li class="product-container">
+        <article>
+          <img class="imgShoes" src="./images/product3.avif" alt="Producto 3" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </article>
+      </li>
+      <li class="product-container">
+        <article>
+          <img class="imgShoes" src="./images/product4.avif" alt="Producto 4" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </article>
+      </li>
+      <li class="product-container">
+        <article>
+          <img class="imgShoes" src="./images/product5.avif" alt="Producto 5" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </article>
+      </li>
+      <li class="product-container">
+        <section>
+          <img class="imgShoes" src="./images/product6.avif" alt="Producto 6" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </section>
+      </li>
+      <li class="product-container">
+        <section>
+          <img class="imgShoes" src="./images/product7.avif" alt="Producto 7" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </section>
+      </li>
+      <li class="product-container">
+        <section>
+          <img class="imgShoes" src="./images/product8.avif" alt="Producto 8" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </section>
+      </li>
+    </ul>
+    <!-- <div class="controls">
+        <button class="prev-button">&lt;</button>
+        <button class="next-button">&gt;</button>
+      </div> -->
+  </section>
+
+  <section class="carousel-products" id="top-kicks">
+    <h2>Top kicks</h2>
+    <ul class="product-list">
+      <li class="product-container">
+        <article>
+          <img class="imgShoes" src="./images/product1.avif" alt="Zapatos 1: Descripción del producto 1" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </article>
+      </li>
+      <li class="product-container">
+        <article>
+          <img class="imgShoes" src="./images/product2.avif" alt="Zapatos 2: Descripción del producto 2" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </article>
+      </li>
+      <!-- Repetir para productos 3 a 8 -->
+
+      <li class="product-container">
+        <!-- Product 3 -->
+        <article>
+          <img class="imgShoes" src="./images/product3.avif" alt="Producto 3" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </article>
+      </li>
+      <li class="product-container">
+        <!-- Product 4 -->
+        <article>
+          <img class="imgShoes" src="./images/product4.avif" alt="Producto 4" />
+          <h3>Product name</h3>
+          <p>Price</p>
+        </article>
+      </li>
+    </ul>
+    <!-- <div class="controls">
+        <button class="prev-button">&lt;</button>
+        <button class="next-button">&gt;</button>
+      </div> -->
+  </section>
+
+  <section class="information">
+    <h2>Never miss a drop.</h2>
+    <p>Receive updates about new products and promotions.</p>
+    <button>
+      <p>JOIN MAILING LIST</p>
+    </button>
+  </section>
+
+  <footer class="footer" id="footer">
+    <section class="footer-information">
+      <div class="footer-menu">
+        <div class="first-block">
+          <article class="options">
+            <ul class="options-menu">
+              <h4>MY ACCOUNT</h4>
+              <li class="options-menu__items">
+                <a href=""> Sign in </a>
+              </li>
+              <li class="options-menu__items">
+                <a href=""> Register </a>
+              </li>
+              <li class="options-menu__items">
+                <a href=""> Order status </a>
+              </li>
+            </ul>
+          </article>
+          <article class="options">
+            <ul class="options-menu">
+              <h4>HELP</h4>
+              <li class="options-menu__items">
+                <a href=""> Shipping </a>
+              </li>
+              <li class="options-menu__items">
+                <a href=""> Returns </a>
+              </li>
+              <li class="options-menu__items">
+                <a href=""> Sizing </a>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="first-block">
+          <article class="options">
+            <ul class="options-menu">
+              <h4>ABOUT</h4>
+              <li class="options-menu__items">
+                <a href=""> Our story </a>
+              </li>
+              <li class="options-menu__items">
+                <a href=""> Media </a>
+              </li>
+              <li class="options-menu__items">
+                <a href=""> Sustainability </a>
+              </li>
+            </ul>
+          </article>
+          <article class="options">
+            <ul class="options-menu">
+              <h4>LEGAL STUFF</h4>
+              <li class="options-menu__items">
+                <a href=""> Terms of use </a>
+              </li>
+              <li class="options-menu__items">
+                <a href=""> Terms of sale </a>
+              </li>
+              <li class="options-menu__items">
+                <a href=""> Privacy policy </a>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
-    </footer>
-  </body>
+      <article class="social-networks">
+        <h4>FOLLOW US</h4>
+        <div class="social-networks-logos">
+          <a class="social-networks-logos__links" href="#">
+            <img src="./images/Facebook.svg" alt="" />
+          </a>
+          <a class="social-networks-logos__links" href="#">
+            <img src="./images/Instagram.svg" alt="" />
+          </a>
+          <a class="social-networks-logos__links" href="#">
+            <img src="./images/Twitter.svg" alt="" />
+          </a>
+          <a class="social-networks-logos__links" href="#">
+            <img src="./images/LinkedIN.svg" alt="" />
+          </a>
+        </div>
+      </article>
+    </section>
+    <div class="copy-right">
+      <p>© 123 Fake Wireframes Inc. All Rights Reserved</p>
+    </div>
+  </footer>
+</body>
+
 </html>

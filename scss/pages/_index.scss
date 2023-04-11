@@ -57,41 +57,53 @@
   padding: $sp-md $sp-lg;
   margin: 0 auto;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 3rem;
-  &-specific {
-    padding: 3rem;
-    width: 32.5rem;
-    height: 32.5rem;
-    background: $primary-color;
-    border-radius: 10px;
+
+  article {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    h2 {
-      @include h2Styles($tercery-color);
-    }
-    .description {
+    row-gap: 1rem;
+    text-align: center;
+    justify-content: center;
+  }
+  &-specific__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    .categories-specific {
+      padding: 3rem;
+      width: 32.5rem;
+      height: 32.5rem;
+      background: $primary-color;
+      border-radius: 10px;
       display: flex;
-      column-gap: 1rem;
-      align-items: center;
-      p {
-        @include paragraph($tercery-color);
-        margin: 0;
+      flex-direction: column;
+      justify-content: space-between;
+      h2 {
+        @include h2Styles($tercery-color);
       }
-      :hover {
-        animation: scale-up 0.75s linear both;
+      .description {
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+        p {
+          @include paragraph($tercery-color);
+          margin: 0;
+        }
+        :hover {
+          animation: scale-up 0.75s linear both;
+        }
       }
-    }
-    &:hover {
-      animation: scale-up 0.8s linear both;
+      &:hover {
+        animation: scale-up 0.8s linear both;
+      }
     }
   }
 }
 
-
-.carousel-products{
+.carousel-products {
   padding: $sp-lg;
   margin: 0 auto;
   display: flex;
@@ -159,7 +171,7 @@
     margin: 0 auto;
   }
   p {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

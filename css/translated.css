@@ -21,6 +21,60 @@
   100% {
     transform: translateY(0px); } }
 
+/*
+* Search input
+*/
+.search-box {
+  background: #111111;
+  height: 50px;
+  border-radius: 30px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.search-input {
+  outline: none;
+  border: none;
+  background: none;
+  width: 0;
+  padding: 0;
+  color: #FFFFFF;
+  float: left;
+  font-size: 16px;
+  transition: 0.3s;
+  line-height: 40px; }
+  .search-input::placeholder {
+    color: #FFFFFF; }
+
+.search-btn {
+  color: #FFFFFF;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 60px;
+  background: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s; }
+
+.search-input:focus,
+.search-input:not(:placeholder-shown) {
+  width: 250px;
+  padding: 0 10px; }
+
+.search-box:hover > .search-input {
+  width: 280px;
+  padding: 0 15px; }
+
+.search-box:hover > .search-btn,
+.search-input:focus + .search-btn,
+.search-input:not(:placeholder-shown) + .search-btn {
+  background: #FFFFFF;
+  color: #111111; }
+
 * {
   margin: 0;
   padding: 0;
@@ -89,22 +143,31 @@ header {
   padding: 0.8rem 2.5rem;
   background-color: #ffffff;
   width: 100%;
+  height: 70px;
   box-shadow: 0 0 7px #7b7b7b;
   position: fixed;
   z-index: 999; }
   header .navbar {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     max-width: 1200px;
+    height: 50px;
     margin: 0 auto; }
+    header .navbar .navbar-toggle {
+      display: flex;
+      justify-items: flex-start;
+      position: absolute;
+      left: 0%;
+      transform: translateY(0%); }
     header .navbar .menu {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       background: #FFFFFF;
       position: fixed;
-      top: 76px;
+      top: 70px;
       width: 100%;
       box-shadow: 0 4px 7px -5px #7b7b7b;
       padding: 2rem;
@@ -126,14 +189,61 @@ header {
         color: #FFFFFF; }
       header .navbar .menu_visible {
         right: 100%; }
+    header .navbar .container-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(15%); }
     header .navbar .logo-container {
+      position: absolute;
+      left: 100%;
+      transform: translateX(-100%) translateY(0%);
       display: flex;
       align-items: center;
+      justify-items: flex-end;
       justify-content: space-between;
-      max-width: 9rem; }
+      width: 8rem; }
       header .navbar .logo-container .icons-header {
-        width: 2.8rem;
+        width: 3.5rem;
         height: auto; }
+        header .navbar .logo-container .icons-header .user-btn {
+          color: #FFFFFF;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background: #111111;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          header .navbar .logo-container .icons-header .user-btn .fa-user {
+            color: #FFFFFF; }
+        header .navbar .logo-container .icons-header .login-text {
+          display: none; }
+
+@media screen and (min-width: 768px) {
+  .logo-container {
+    width: 20rem !important; }
+    .logo-container .icons-header-perfil {
+      position: relative;
+      width: 15rem !important;
+      height: 4rem !important;
+      display: flex !important; }
+      .logo-container .icons-header-perfil .user-btn {
+        width: 15rem !important;
+        height: 4rem !important;
+        border-radius: 10px !important;
+        justify-content: flex-start !important;
+        padding: 10px 20px !important; }
+      .logo-container .icons-header-perfil .login-text {
+        display: flex !important;
+        align-items: center !important;
+        align-self: center;
+        justify-items: center;
+        margin: 0;
+        position: absolute;
+        top: 10px;
+        left: 50px;
+        color: #ffffff;
+        font-size: 12px !important; } }
 
 .footer {
   margin-top: 8rem;
@@ -269,41 +379,51 @@ header {
   padding: 1.6rem 3.2rem;
   margin: 0 auto;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 3rem; }
-  .categories-specific {
-    padding: 3rem;
-    width: 32.5rem;
-    height: 32.5rem;
-    background: #111111;
-    border-radius: 10px;
+  .categories article {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
-    .categories-specific h2 {
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 800;
-      font-size: 40px;
-      letter-spacing: -0.02em;
-      color: #FFFFFF; }
-    .categories-specific .description {
+    row-gap: 1rem;
+    text-align: center;
+    justify-content: center; }
+  .categories-specific__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem; }
+    .categories-specific__container .categories-specific {
+      padding: 3rem;
+      width: 32.5rem;
+      height: 32.5rem;
+      background: #111111;
+      border-radius: 10px;
       display: flex;
-      column-gap: 1rem;
-      align-items: center; }
-      .categories-specific .description p {
-        font-family: "Poppins";
+      flex-direction: column;
+      justify-content: space-between; }
+      .categories-specific__container .categories-specific h2 {
+        font-family: "Montserrat";
         font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 28px;
-        color: #FFFFFF;
-        margin: 0; }
-      .categories-specific .description :hover {
-        animation: scale-up 0.75s linear both; }
-    .categories-specific:hover {
-      animation: scale-up 0.8s linear both; }
+        font-weight: 800;
+        font-size: 40px;
+        letter-spacing: -0.02em;
+        color: #FFFFFF; }
+      .categories-specific__container .categories-specific .description {
+        display: flex;
+        column-gap: 1rem;
+        align-items: center; }
+        .categories-specific__container .categories-specific .description p {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 28px;
+          color: #FFFFFF;
+          margin: 0; }
+        .categories-specific__container .categories-specific .description :hover {
+          animation: scale-up 0.75s linear both; }
+      .categories-specific__container .categories-specific:hover {
+        animation: scale-up 0.8s linear both; }
 
 .carousel-products {
   padding: 3.2rem;
@@ -346,7 +466,7 @@ header {
     max-width: 250px;
     margin: 0 auto; }
   .information p {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
