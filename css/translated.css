@@ -169,11 +169,11 @@ header {
       position: fixed;
       top: 70px;
       width: 100%;
+      height: 14rem;
       box-shadow: 0 4px 7px -5px #7b7b7b;
       padding: 2rem;
       margin: 0 auto;
       gap: 1rem;
-      height: auto;
       overflow-y: auto;
       right: 0;
       transition: right 0.3s;
@@ -220,22 +220,34 @@ header {
           display: none; }
 
 @media screen and (min-width: 768px) {
-  .logo-container {
-    width: 20rem !important; }
-    .logo-container .icons-header-perfil {
+  header .navbar .navbar-toggle {
+    display: none; }
+  header .navbar .menu {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 0%;
+    transform: translateY(-75px);
+    background: none;
+    box-shadow: none;
+    gap: 1.5rem;
+    max-width: 23rem; }
+  header .navbar .logo-container {
+    width: 16rem; }
+    header .navbar .logo-container .icons-header-perfil {
       position: relative;
-      width: 15rem !important;
-      height: 4rem !important;
-      display: flex !important; }
-      .logo-container .icons-header-perfil .user-btn {
-        width: 15rem !important;
-        height: 4rem !important;
-        border-radius: 10px !important;
-        justify-content: flex-start !important;
-        padding: 10px 20px !important; }
-      .logo-container .icons-header-perfil .login-text {
-        display: flex !important;
-        align-items: center !important;
+      width: 12rem;
+      height: 4rem;
+      display: flex; }
+      header .navbar .logo-container .icons-header-perfil .user-btn {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        justify-content: flex-start;
+        padding: 10px 20px; }
+      header .navbar .logo-container .icons-header-perfil .login-text {
+        display: flex;
+        align-items: center;
         align-self: center;
         justify-items: center;
         margin: 0;
@@ -243,7 +255,7 @@ header {
         top: 10px;
         left: 50px;
         color: #ffffff;
-        font-size: 12px !important; } }
+        font-size: 12px; } }
 
 .footer {
   margin-top: 8rem;
