@@ -6,6 +6,17 @@ navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("menu_visible");
 });
 
+$(".custom-carousel").owlCarousel({
+  autoWidth: true,
+  loop: true
+});
+$(document).ready(function () {
+  $(".custom-carousel .item").hover(function () {
+    $(".custom-carousel .item").not($(this)).removeClass("active");
+    $(this).toggleClass("active");
+  });
+});
+
 /**
  * Clase User, metodos y funciones
  */
@@ -418,3 +429,5 @@ let productsList2 = [
     "Hombre"
   )
 ]
+
+

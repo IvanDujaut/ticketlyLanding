@@ -1,33 +1,24 @@
-let name = "Homero";
-let lastName = "Simpson";
-let age = 67;
+/*----Para desplegar el menu en la seccion mobile ----*/
+const navToggle = document.querySelector(".navbar-toggle");
+const navMenu = document.querySelector(".menu");
 
-const city1 = "Posadas";
-const city2 = "Corrientes";
-const city3 = "CABA";
-const city4 = "Montevideo";
-const city5 = "Brasilia";
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("menu_visible");
+});
 
-let drivingLicenseName = "Bart";
-let drivingLicenseLastName = "Simpson";
-let drivingLicenseAddress = "742 Evergreen Terr.";
-let drivingLicenseCity = "Springfield";
-let drivingLicenseCountry = "USA";
-let drivingLicenseCode = "B47U89RE243";
-let gender = "M";
+/*---- Para el carrusel ----*/
+$(".custom-carousel").owlCarousel({
+  autoWidth: true,
+  loop: true
+});
+$(document).ready(function () {
+  $(".custom-carousel .item").hover(function () {
+    $(".custom-carousel .item").not($(this)).removeClass("active");
+    $(this).toggleClass("active");
+  });
+});
 
-const drivingLicense =
-  drivingLicenseCode +
-  "\n" +
-  drivingLicenseName +
-  " " +
-  drivingLicenseLastName +
-  "\n" +
-  drivingLicenseAddress +
-  "\n" +
-  drivingLicenseCity +
-  ", " +
-  drivingLicenseCountry;
+/*--------*/
 
 
-console.log(drivingLicense);
+

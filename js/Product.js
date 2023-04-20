@@ -169,6 +169,97 @@ const findProductBy = (arr, filterType, filterValue) => {
     return encontrado;
 };
 
-console.log('Encontrado por color', findProductBy(productsList, 'color' , 'naranja'));
-console.log('Encontrado por size', findProductBy(productsList, 'size', 40));
-console.log('Encontrado por genero', findProductBy(productsList, 'gender', 'muj'));
+// console.log('Encontrado por color', findProductBy(productsList, 'color' , 'naranja'));
+// console.log('Encontrado por size', findProductBy(productsList, 'size', 40));
+// console.log('Encontrado por genero', findProductBy(productsList, 'gender', 'muj'));
+
+let productsList2 = [
+    new Product(
+      "Zapatillas L-Spin Deluxe",
+      81,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et massa pretium lacus dapibus condimentum a nec nulla. Sed iaculis pretium mauris, eget commodo sapien tincidunt quis. Nam dictum metus auctor, pulvinar risus a, commodo nulla. Pellentesque luctus dolor eu pharetra semper. Vestibulum vehicula, lorem accumsan viverra rhoncus, ipsum nisi suscipit nisl, eu venenatis massa urna sed augue. Morbi accumsan pharetra arcu. Nunc non ligula enim. Pellentesque malesuada faucibus massa.",
+      "../images/product1.avif",
+      ["blanco"],
+      [40],
+      "Hombre"
+    ),
+    new Product(
+      "Zapatillas L004",
+      85,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et massa pretium lacus dapibus condimentum a nec nulla. Sed iaculis pretium mauris, eget commodo sapien tincidunt quis. Nam dictum metus auctor, pulvinar risus a, commodo nulla. Pellentesque luctus dolor eu pharetra semper. Vestibulum vehicula, lorem accumsan viverra rhoncus, ipsum nisi suscipit nisl, eu venenatis massa urna sed augue. Morbi accumsan pharetra arcu. Nunc non ligula enim. Pellentesque malesuada faucibus massa.",
+      "../images/product1.avif",
+      ["blanco", "celeste"],
+      [41],
+      "Hombre"
+    ),
+    new Product(
+      "Zapatillas 080",
+      85,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et massa pretium lacus dapibus condimentum a nec nulla. Sed iaculis pretium mauris, eget commodo sapien tincidunt quis. Nam dictum metus auctor, pulvinar risus a, commodo nulla. Pellentesque luctus dolor eu pharetra semper. Vestibulum vehicula, lorem accumsan viverra rhoncus, ipsum nisi suscipit nisl, eu venenatis massa urna sed augue. Morbi accumsan pharetra arcu. Nunc non ligula enim. Pellentesque malesuada faucibus massa.",
+      "../images/product1.avif",
+      ["blanco", "azul"],
+      [44],
+      "Hombre"
+    ),
+    new Product(
+      "Zapatillas Jump Serve Lace",
+      74,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et massa pretium lacus dapibus condimentum a nec nulla. Sed iaculis pretium mauris, eget commodo sapien tincidunt quis. Nam dictum metus auctor, pulvinar risus a, commodo nulla. Pellentesque luctus dolor eu pharetra semper. Vestibulum vehicula, lorem accumsan viverra rhoncus, ipsum nisi suscipit nisl, eu venenatis massa urna sed augue. Morbi accumsan pharetra arcu. Nunc non ligula enim. Pellentesque malesuada faucibus massa.",
+      "../images/product1.avif",
+      ["rosado", "naranja"],
+      [35, 36, 37, 38, 39, 40],
+      "Mujer"
+    ),
+    new Product(
+      "Zapatillas B53",
+      85,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et massa pretium lacus dapibus condimentum a nec nulla. Sed iaculis pretium mauris, eget commodo sapien tincidunt quis. Nam dictum metus auctor, pulvinar risus a, commodo nulla. Pellentesque luctus dolor eu pharetra semper. Vestibulum vehicula, lorem accumsan viverra rhoncus, ipsum nisi suscipit nisl, eu venenatis massa urna sed augue. Morbi accumsan pharetra arcu. Nunc non ligula enim. Pellentesque malesuada faucibus massa.",
+      "../images/product1.avif",
+      ["blanco", "rosado"],
+      [35, 37, 38],
+      "Mujer"
+    ),
+    new Product(
+      "Zapatillas Match Break",
+      143,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et massa pretium lacus dapibus condimentum a nec nulla. Sed iaculis pretium mauris, eget commodo sapien tincidunt quis. Nam dictum metus auctor, pulvinar risus a, commodo nulla. Pellentesque luctus dolor eu pharetra semper. Vestibulum vehicula, lorem accumsan viverra rhoncus, ipsum nisi suscipit nisl, eu venenatis massa urna sed augue. Morbi accumsan pharetra arcu. Nunc non ligula enim. Pellentesque malesuada faucibus massa.",
+      "../images/product1.avif",
+      ["blanco", "azul"],
+      [39, 40, 41, 42, 43, 44],
+      "Hombre"
+    ),
+    new Product(
+      "Zapatillas 2Q9",
+      99,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et massa pretium lacus dapibus condimentum a nec nulla. Sed iaculis pretium mauris, eget commodo sapien tincidunt quis. Nam dictum metus auctor, pulvinar risus a, commodo nulla. Pellentesque luctus dolor eu pharetra semper. Vestibulum vehicula, lorem accumsan viverra rhoncus, ipsum nisi suscipit nisl, eu venenatis massa urna sed augue. Morbi accumsan pharetra arcu. Nunc non ligula enim. Pellentesque malesuada faucibus massa.",
+      "../images/product1.avif",
+      ["blanco", "celeste"],
+      [38, 39],
+      "Mujer"
+    ),
+    new Product(
+      "Zapatillas L-Spin de tela",
+      122,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et massa pretium lacus dapibus condimentum a nec nulla. Sed iaculis pretium mauris, eget commodo sapien tincidunt quis. Nam dictum metus auctor, pulvinar risus a, commodo nulla. Pellentesque luctus dolor eu pharetra semper. Vestibulum vehicula, lorem accumsan viverra rhoncus, ipsum nisi suscipit nisl, eu venenatis massa urna sed augue. Morbi accumsan pharetra arcu. Nunc non ligula enim. Pellentesque malesuada faucibus massa.",
+      "../images/product1.avif",
+      ["blanco", "verde", 'gris'],
+      [39, 40, 41, 42, 43, 44],
+      "Hombre"
+    )
+  ]
+
+let carrito = [];
+
+productsList2.forEach((product) => {
+    let content = document.createElement("div");
+
+    content.innerHTML = `
+        <img src = "${product._img}">
+        <h3>${product._productName}</h3>
+        <p>${product._price}</p>
+    `;
+});
+
+productsList2.forEach((product) => {
+    console.log(product._img);
+})
